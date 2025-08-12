@@ -1,4 +1,3 @@
-
 // compiler directive applied to the entire file.
 #![allow(unused_variables)]
 
@@ -30,7 +29,9 @@ fn sum_fruits() {
         apple, banana
     );
 
-    un_used_variables()
+    un_used_variables();
+
+    variable_mutability();
 }
 
 // compiler directive applied to a function.
@@ -38,4 +39,11 @@ fn sum_fruits() {
 fn un_used_variables() {
     let unused_variable = "this variable its unused";
     let unused_variable_two = "this variable its unused";
+}
+
+fn variable_mutability() {
+    let mut pineapple = 20;
+    println!("Number of pineapples: {0}", pineapple);
+    pineapple = 23;
+    println!("Now we have pineapples: {0}", pineapple);
 }
